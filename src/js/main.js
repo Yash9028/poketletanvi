@@ -44,7 +44,6 @@ function renderFilterPokemons(input) {
         image:
           "https://i.pinimg.com/originals/11/52/0c/11520cf1cc72ad1aab32fb3f26685619.jpg",
         description: "Try a different search term",
-        link: "https://pokemon.com",
       },
     ]);
 

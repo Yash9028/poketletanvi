@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+body {
+  font-family: "Teachers", sans-serif;
+}
+.card {
+  height: 100%;
+  transform: 1s all ease;
+  &:hover {
+    background-color: rgba(233, 168, 103, 0.733);
+    transform: scale(1.05);
+  }
+}
