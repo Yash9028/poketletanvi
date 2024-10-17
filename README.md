@@ -42,3 +42,8 @@ attribute `"[data-pokemon-row]"`
 el.appendChild()
 const p = doc.createElement('p')
 p.classList.add('col')
+
+
+<!-- new   -->
+shuffle card=fast shuffle (npm package)
+fuzzy search (closely matches searching )
