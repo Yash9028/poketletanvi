@@ -13,13 +13,17 @@ function renderPokemons(list) {
   // Empty the previous content
   pokemonRow.innerHTML = "";
 
+  // fragment(hold the data for some time )
+  const fragement = document.createDocumentFragment();
+
   list.forEach((pokemonObj) => {
     const { name, image, description, link } = pokemonObj;
     const pokemon = PokemonCard(name, image, description, link);
-    pokemonRow.appendChild(pokemon);
+    fragement.appendChild(pokemon);
   });
+  pokemonRow.appendChild(fragement);
 }
-
+// pokemonRow.appendChild(fragement);
 // Filtering
 function renderFilterPokemons(input) {
   // const filteredPokemons = data.filter((obj) =>
@@ -30,9 +34,13 @@ function renderFilterPokemons(input) {
     return renderPokemons(data);
   }
 
-  const fuse = new Fuse(data, {
-    keys: ["name"],
-  });
+  // threshold npm
+  const options = {
+    keys: ["name", "abilities"],
+    threshold: 0.5,
+  };
+
+  const fuse = new Fuse(data, options);
 
   const filteredPokemons = fuse.search(input).map((obj) => obj.item);
 
